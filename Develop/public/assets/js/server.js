@@ -59,6 +59,20 @@ app.post('/api/notes', (req, res) => {
     })
 })
 
+app.delete('/api/notes/:id', (req, res) => {
+    const noteId = req.params.id;
+
+    const index = notes.findIndex((note) => note.id === noteId);
+
+    if (index !== -1) {
+        notes.splice(index, 1);
+
+        fs.writeFile(dbFilePath, JSON.stringify(notes), (err) => {
+            if(err) { console.error(err) }
+        })
+    }
+})
+
 
 // initializes app
 app.listen(PORT, () =>
