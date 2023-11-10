@@ -59,6 +59,7 @@ app.post('/api/notes', (req, res) => {
     })
 })
 
+// DELETE for the clicked note, removes it from array and rewrites file
 app.delete('/api/notes/:id', (req, res) => {
     const noteId = req.params.id;
 

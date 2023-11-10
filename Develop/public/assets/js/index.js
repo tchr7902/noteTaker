@@ -28,6 +28,7 @@ const hide = (elem) => {
 // activeNote is used to keep track of the note in the textarea
 let activeNote = {};
 
+// fetches the notes
 const getNotes = () =>
   fetch('/api/notes', {
     method: 'GET',
@@ -36,6 +37,7 @@ const getNotes = () =>
     }
   });
 
+// saves the notes
 const saveNote = (note) =>
   fetch('/api/notes', {
     method: 'POST',
@@ -45,14 +47,7 @@ const saveNote = (note) =>
     body: JSON.stringify(note)
   });
 
-const deleteNote = (id) =>
-  fetch(`/api/notes/${id}`, {
-    method: 'DELETE',
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  });
-
+// renders notes and deals with button attributes
 const renderActiveNote = () => {
   hide(saveNoteBtn);
   hide(clearBtn);
@@ -72,6 +67,7 @@ const renderActiveNote = () => {
   }
 };
 
+// function to handle note saving
 const handleNoteSave = () => {
   const newNote = {
     title: noteTitle.value,
@@ -83,9 +79,8 @@ const handleNoteSave = () => {
   });
 };
 
-// Delete the clicked note
+// Deletes the clicked note
 const handleNoteDelete = (e) => {
-  // Prevents the click listener for the list from being called when the button inside of it is clicked
   e.stopPropagation();
 
   const note = e.target;
