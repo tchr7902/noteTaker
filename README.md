@@ -6,6 +6,7 @@ This project was built in order to provide the user with an application that all
 
 ## Usage
 
+[Deployed Application](https://tranquil-hamlet-61645-7f5ea760963e.herokuapp.com/)
 ![Deployed Screenshot](./Develop/public/assets/images/notetaker.PNG)
 
 ## Credits
