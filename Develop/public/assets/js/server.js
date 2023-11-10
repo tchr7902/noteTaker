@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 
 
 // access to the public folder
-app.use(express.static('public'));
+app.use(express.static('../../../public'));
 
 
 // GET for the landing page, sends the index.html file
