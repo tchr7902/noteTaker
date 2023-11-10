@@ -6,7 +6,7 @@ This project was built in order to provide the user with an application that all
 
 ## Usage
 
-App screenshot coming soon!
+![Deployed Screenshot](./Develop/public/assets/images/notetaker.PNG)
 
 ## Credits
 
