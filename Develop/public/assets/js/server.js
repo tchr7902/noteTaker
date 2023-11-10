@@ -6,7 +6,7 @@ const path = require('path');
 const { v4: uuidv4 } = require('uuid');
 const notes = require('../../../db/db.json')
 const app = express();
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 const dbFilePath = path.join(__dirname, '../../../db/db.json');
 
 
